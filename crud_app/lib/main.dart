@@ -64,12 +64,21 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Task Manager'),
+        title: const Text('Cuervo Task Manager'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /// **Task Counter**
+            Text(
+              'Total Tasks: ${_tasks.length}',
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+
+            /// **Task Input Field & Add Button**
             Row(
               children: [
                 Expanded(
@@ -89,6 +98,8 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
               ],
             ),
             const SizedBox(height: 20),
+
+            /// **Task List**
             Expanded(
               child: _tasks.isEmpty
                   ? const Center(child: Text('No tasks added yet'))
