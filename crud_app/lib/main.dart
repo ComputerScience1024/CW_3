@@ -64,7 +64,7 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cuervo Task Manager'),
+        title: const Text('Cuervo Task Manager 🐦‍⬛'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
